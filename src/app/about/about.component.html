@@ -1,0 +1,14 @@
+<div class="project-sect">
+	<div class="inner_container">
+    <h1>
+      List Project have been Completed 
+    </h1>
+		<div class="projects" *ngFor="let val of project_json_array">
+       <h3> {{ val.Project }} </h3> 
+       <div class="keys"><b>Project Description</b> : <span>{{ val.desc }}</span></div>
+       <div class="keys"><b>Project Duration</b> : <span>{{ val.Project_Duration }}</span></div>
+       <div class="keys"><b>Technology Used</b> : <span>{{ val.Technology_Used }}</span></div>
+       <div class="keys"><b>Tools Used</b> : <span>{{ val.Tools_Used }}</span></div>
+		</div>
+	</div>
+</div>

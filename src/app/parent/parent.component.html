@@ -1,0 +1,8 @@
+ <h1>SBR Boopa</h1>
+ <app-child [childmsg]="parentMessage" (newMsgEvent)="receiveMsg($event)"></app-child>
+<!-- newMsgEvent Event emitter is event from child ---> 
+ <div>{{message}}</div>
+
+ <div>
+    RESULT : {{ viewChildMsg }}
+ </div>

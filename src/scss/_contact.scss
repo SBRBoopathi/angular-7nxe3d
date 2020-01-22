@@ -1,0 +1,35 @@
+contact{
+  .btn-group, .btn-group-vertical
+  {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .add_btn_group{
+    @extend .common_float;
+    .addbtn{
+      margin: 11px 0;
+      color: white;
+      background: green;
+      padding: 12px 20px;
+      
+    }
+
+  }
+  
+    select{
+      padding: 7px;
+      border-radius: 5px;
+      width: 100%;
+    }
+    .test{
+      
+      @extend .common_float;
+          padding: 10px;
+    background: #ccc;
+    margin: 10px 0;
+    .fa{
+      float: right;
+      cursor: pointer;
+    }
+    }
+}

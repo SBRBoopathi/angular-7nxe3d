@@ -1,0 +1,60 @@
+header{
+  @extend .common_float;
+  background: #e5e5e5;
+  padding:16px 0;
+  .nac_sect{
+    @extend .common_float;
+    .dropdown-menu.show button{
+      padding-top: 15px;
+      padding-bottom: 15px;
+      &:hover{
+        background:$corp-color-second-dark !important;
+        border-color:$corp-color-second-dark !important;
+        color:$white;
+      }
+      &:focus,&:active{
+        border-color:$corp-color-second-dark !important;
+        }
+        &.active{
+        border-color:$corp-color-second-dark !important;
+        }
+    }
+  }
+  .sect{
+    .logo{
+      float:left;
+      .logo-sect{
+        font-size: 20px;
+        background:$corp-color-dark;
+        color:$white;
+        padding: 18px 10px 17px 9px;
+        border-radius: 100%;
+        font-weight: bold;
+        font-style: italic;
+        letter-spacing: 2px;
+      }
+    }
+    nav{
+      float:right;
+      button{
+        background:$white;
+        color:$corp-color-dark;
+        border-color:$corp-color-dark;
+        font-size:14px;
+        &:hover{
+          background:$corp-color-second-dark;
+           border-color:$corp-color-second-dark !important;
+           
+        }
+        &:focus,&:active{
+          box-shadow: none !important;          
+          border-color:$corp-color-second-dark !important;
+        }
+        &.active{
+          background:$corp-color-second-dark !important;          
+          border-color:$corp-color-second-dark !important;
+        }
+      }
+    }
+  }
+}

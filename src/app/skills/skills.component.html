@@ -1,0 +1,50 @@
+<div class="container-fluid full-width">
+	<!--banner></banner-->
+	<div class="inner_container">
+		<div class="skill_inner">
+			<div>
+				<h1>Completed Projects</h1>
+			</div>
+
+			<div class="table-responsive">
+
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th scope="col">#</th>
+							<th scope="col">Project</th>
+							<th scope="col">Description</th>
+							<th scope="col">Project Duration</th>
+							<th scope="col">Technology Used</th>
+							<th scope="col">Tools Used</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr *ngFor="let skill of myskills">
+							<th scope="row">{{ skill.id}}</th>
+							<td>
+								{{ skill.Project }}
+							</td>
+							<td>{{ skill.desc }}</td>
+							<td>{{ skill.Project_Duration }}</td>
+							<td>{{ skill.Technology_Used }}</td>
+							<td>{{ skill.Tools_Used }}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+      <!--ngb-pagination [collectionSize]="70" [(page)]="page" aria-label="Default pagination"></ngb-pagination-->
+			<!--div class="d-flex justify-content-between p-2">
+		<!--ngb-pagination [collectionSize]="myskills.length" [(page)]="page" [pageSize]="pageSize">
+		</ngb-pagination>
+
+		<select class="custom-select" style="width: auto" [(ngModel)]="pageSize">
+    <option [ngValue]="2">2 items per page</option>
+    <option [ngValue]="4">4 items per page</option>
+    <option [ngValue]="6">6 items per page</option>
+  </select-->
+	</div>
+ 
+		</div>
+
+	</div>

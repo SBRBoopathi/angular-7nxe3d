@@ -1,0 +1,27 @@
+<div class="nac_sect">
+	<div class="inner_container">
+		<div class="sect">
+			<div class="logo">
+				<div class="logo-sect">
+					SBR
+				</div>
+				<!--img id="logo-default" src="http://consultsbr.com/wp-content/uploads/2016/06/SBR_Logo_02_FIN-retina.png" alt="logo" width="76" height="76"!-->
+			</div>
+			<nav class="d-inline-block" ngbDropdown #myDrop="ngbDropdown">
+				<button routerLink="home" routerLinkActive="active" class="btn btn-outline-success mr-2" >Home</button>
+				<button routerLink="about" routerLinkActive="active"  class="btn btn-outline-success mr-2" >About My Projects</button>
+				<button routerLink="/skills" routerLinkActive="active"  class="btn btn-outline-success mr-2" >Skills</button>
+				<button routerLink="parent" routerLinkActive="active"  class="btn btn-outline-success mr-2" id="working_Exp" ngbDropdownAnchor (focus)="myDrop.open()">Work Experience</button>
+				<div ngbDropdownMenu aria-labelledby="working_Exp">
+					<button ngbDropdownItem routerLink="child">Clasticon/child</button>
+					<button ngbDropdownItem>Pixel Studois</button>
+					<button ngbDropdownItem>Tavant Technologies</button>
+					<button ngbDropdownItem>DMT</button>
+				</div>
+				<button routerLink="contact" routerLinkActive="active"  class="btn btn-outline-success mr-2" >Contact Me</button>
+				<!--button class="btn btn-outline-danger mr-2" (click)="$event.stopPropagation(); myDrop.close();">Close from outside</button-->
+			</nav>
+		</div>
+	</div>
+
+</div>

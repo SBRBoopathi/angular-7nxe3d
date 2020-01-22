@@ -1,0 +1,111 @@
+<div class="container-fluid full-width">
+	<div class="inner_container">
+		<div>
+			<h1>{{ name | addWelcomeWord }}</h1>
+		</div>
+		<div class="form_sect">
+			<!-- Default form register -->
+			<div class="row">
+				<div class="col-md-6">
+					<form class="form-horizontal" [formGroup]="userForm" (ngSubmit)="submit()">
+						<div class="form-group">
+							<label class="control-label col-sm-2">Name</label>
+							<div class="col-sm-12">
+								<input type="text" class="form-control" name="name" formControlName="name">
+						  </div>
+						</div>
+            <div class="form-group">
+              <label class="control-label col-sm-2">Email</label>
+              <div class="col-sm-12">
+                <input type="email" class="form-control" name="email"  formControlName="email">
+              </div>
+            </div>
+            <!--div class="form-group">
+              <label class="control-label col-sm-2">Email1</label>
+              <div class="col-sm-12">
+                <input type="email" class="form-control"  formControlName="email">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="control-label col-sm-2">Email</label>
+              <div class="col-sm-12">
+                <input type="email" class="form-control"  formControlName="email">
+              </div>
+            </div-->
+            <div class="form-group">              
+              <div class="btn-group btn-group-toggle" ngbRadioGroup>
+                <label ngbButtonLabel class="btn-primary">
+                  <input ngbButton type="radio" formControlName="aligned" name="aligned" value = "Left"> Left
+                </label>
+                <label ngbButtonLabel class="btn-primary">
+                  <input ngbButton type="radio" formControlName="aligned" name="aligned" value = "Middle"> Middle
+                </label>
+                <label ngbButtonLabel class="btn-primary">
+                  <input ngbButton type="radio" formControlName="aligned" name="aligned" value = "Right"> Right
+                </label>
+              </div>
+            </div>
+            
+            <div class="form-group" formArrayName="multiple_align">              
+              <div class="btn-group btn-group-toggle" ngbRadioGroup>
+                <label formGroupName='0' ngbButtonLabel class="btn-primary">
+                  <input ngbButton type="checkbox" formControlName="left" name="left" value = "Left"> Left
+                </label>
+                <label formGroupName='1' ngbButtonLabel class="btn-primary">
+                  <input ngbButton type="checkbox" formControlName="middle" name="middle" value = "Middle"> Middle
+                </label>
+                <label formGroupName='2' ngbButtonLabel class="btn-primary">
+                  <input ngbButton type="checkbox" formControlName="right" name="right" value = "Right"> Right
+                </label>
+              </div>
+            </div>            
+            <div class="form-group add_btn_group">
+              <button class="btn btn-default float-right addbtn" type="button" (click) = 'add_address()'>Add Address</button>
+            </div>
+            <div class="test" formArrayName='add_adress' *ngFor = "let address of userForm.get('add_adress').controls ; let i = index">
+              
+              <i class="fa fa-times-circle" (click)="remove(i)" aria-hidden="true"></i>
+              <div class="in" [formGroupName]= "i">
+                  
+                <div class="form-group">
+                  <label class="control-label col-sm-2">County</label>
+                  <div class="col-sm-12">
+                    <input type="text" class="form-control" name="county" formControlName="county">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2">City</label>
+                  <div class="col-sm-12">
+                    <select name="" id=""  formControlName="city" name="city">
+                      <option value="Salem">Salem</option>
+                      <option value="Namakkal">Namakkal</option>
+                      <option value="Erode">Erode</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="control-label col-sm-2">State</label>
+                  <div class="col-sm-12">
+                    <select name="" id=""  formControlName="state" name="state">
+                      <option value="TamilNadu1">TamilNadu1</option>
+                      <option value="TamilNadu2">TamilNadu2</option>
+                      <option value="TamilNadu3">TamilNadu3</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-default" type="button" (click)="reset()">Reset</button>
+            <button class="btn btn-primary pull-right " type="submit" [disabled]="!userForm.valid">Submit</button>
+					</form>
+				</div>
+        <div class="col-md-6">
+          <pre>{{ userForm.value | json }}</pre>
+          <pre>{{ userForm.valid | json }}</pre>
+        </div>
+			</div>
+			<!-- Default form register -->
+		</div>
+
+	</div>
+</div>
